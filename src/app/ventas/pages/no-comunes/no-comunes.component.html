@@ -9,16 +9,38 @@
 
     <div class="col md-6">
         <p-fieldset legend="i18nSelect Pipe" [toggleable]="true">
-            Saludos {{ nombre }}, es un placer
-            {{ genero | i18nSelect:invitacionMapa }}
-            a nuestro evento.
+            <p>
+                Saludos {{ nombre }}, es un placer
+                {{ genero | i18nSelect:invitacionMapa }}
+                a nuestro evento.
+            </p>
+            <button 
+                pButton 
+                type="button" 
+                icon="pi pi-check" 
+                iconPos="left"
+                label="Cambiar persona"
+                class="p-button-help p-button-raised p-button-rounded"
+                (click)="cambiarCliente()">
+            </button>
         </p-fieldset>
     </div>
 
     <div class="col md-6">
         <p-fieldset legend="i18nPlural Pipe" [toggleable]="true">
 
-            Actualmente tenemos {{ clientes.length | i18nPlural:clientesMapa }}
+            <p>
+                Actualmente tenemos {{ clientes.length | i18nPlural:clientesMapa }}
+            </p>
+            <button 
+                pButton 
+                type="button" 
+                icon="pi pi-check" 
+                iconPos="left"
+                label="Borrar persona"
+                class="p-button-danger p-button-raised p-button-rounded"
+                (click)="borrarCliente()">
+            </button>
 
         </p-fieldset>
     </div>
