@@ -1,18 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  
-  nombre: string = 'IsiDro SoTocA';
-  valor: number = 100000;
-  obj: Object = {"nombre": 'Isidro'};
+export class AppComponent implements OnInit {
 
-  mostrarNombre() {
-    console.log(this.nombre)
+  constructor( private primeNGConfig: PrimeNGConfig ) {
+    // Empty
+  }
+
+  ngOnInit() {
+    this.primeNGConfig.ripple = true;
   }
 
 }
