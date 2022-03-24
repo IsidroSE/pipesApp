@@ -33,4 +33,27 @@ export class NoComunesComponent {
     this.clientes.splice(0, 1);
   }
 
+  // KeyValue Pipe
+  persona = {
+    nombre: 'Isidro',
+    edad: 35,
+    direccion: 'Tavernes de la Valldigna, Valencia'
+  }
+
+  // JsonPipe
+  heroes = [
+    {
+      nombre: 'Superman',
+      vuela: true
+    },
+    {
+      nombre: 'Robin',
+      vuela: false
+    },
+    {
+      nombre: 'Aquaman',
+      vuela: false
+    }
+  ];
+
 }
