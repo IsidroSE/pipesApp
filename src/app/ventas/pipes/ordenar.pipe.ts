@@ -20,13 +20,7 @@ export class OrdenarPipe implements PipeTransform {
       default: 
         return heroes;
     }
-
-    if (orderPor === 'sin valor' ) {
-      return heroes;
-    }
-    heroes = heroes.sort( (a,b) => ( a.nombre > b.nombre ) ? 1 : -1 );
-
-    return heroes;
+    
   }
 
 }
